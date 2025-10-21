@@ -1,6 +1,6 @@
-# Flash Express - Post Delivery Services
+# Fast Express - Post Delivery Services
 
-A modern, responsive post delivery tracking and management system built with Next.js, Tailwind CSS, and Material-UI. Inspired by Flash Express Thailand's delivery service interface.
+A modern, responsive post delivery tracking and management system built with Next.js, Tailwind CSS, Material-UI, and NestJS backend with MongoDB. Inspired by Fast Express Thailand's delivery service interface.
 
 ## 🚀 Features
 
@@ -31,12 +31,19 @@ A modern, responsive post delivery tracking and management system built with Nex
 
 ## 🛠️ Tech Stack
 
+### Frontend
 - **Framework**: Next.js 15.5.6 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v4 with @tailwindcss/postcss
 - **UI Components**: Material-UI (MUI) v7
 - **Icons**: MUI Icons
 - **Runtime**: Node.js
+
+### Backend
+- **Framework**: NestJS
+- **Database**: MongoDB with Mongoose ODM
+- **Validation**: class-validator, class-transformer
+- **Configuration**: @nestjs/config with .env support
 
 ## 📦 Installation
 
@@ -46,29 +53,63 @@ A modern, responsive post delivery tracking and management system built with Nex
    cd tailwincss-layout-post-delivery-services
    ```
 
-2. **Install dependencies**
+2. **Install frontend dependencies**
    ```bash
    npm install
    ```
 
-3. **Run development server**
+3. **Install backend dependencies**
+   ```bash
+   cd backend
+   npm install
+   ```
+
+4. **Configure backend environment**
+   Create a `.env` file in the `backend` directory:
+   ```env
+   PORT=3001
+   MONGODB_URI=mongodb://localhost:27017/fastexpress
+   ```
+
+5. **Run development servers**
+   
+   Frontend:
    ```bash
    npm run dev
    ```
+   
+   Backend (in a separate terminal):
+   ```bash
+   cd backend
+   npm run start:dev
+   ```
 
-4. **Open in browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+6. **Open in browser**
+   - Frontend: [http://localhost:3000](http://localhost:3000)
+   - Backend API: [http://localhost:3001/api](http://localhost:3001/api)
 
 ## 🏗️ Build & Deploy
 
-### Build for Production
+### Build Frontend
 ```bash
 npm run build
 ```
 
-### Start Production Server
+### Start Frontend Production Server
 ```bash
 npm start
+```
+
+### Build Backend
+```bash
+cd backend
+npm run build
+```
+
+### Start Backend Production Server
+```bash
+cd backend
+npm run start:prod
 ```
 
 ### Lint Code
@@ -79,16 +120,24 @@ npm run lint
 ## 📁 Project Structure
 
 ```
-├── app/
+├── app/                     # Next.js app directory
 │   ├── layout.tsx          # Root layout with MUI theme provider
 │   ├── page.tsx            # Main page with tab navigation
 │   └── globals.css         # Global styles and Tailwind imports
+├── backend/                 # NestJS backend API
+│   ├── src/
+│   │   ├── tracking/       # Tracking module
+│   │   ├── orders/         # Orders module
+│   │   └── main.ts         # Application entry point
+│   └── README.md           # Backend documentation
 ├── components/
 │   ├── Header.tsx          # Navigation header
 │   ├── TrackingSection.tsx # Shipment tracking interface
 │   ├── ServicesSection.tsx # Services showcase
 │   ├── OrderList.tsx       # Order management interface
 │   └── Footer.tsx          # Site footer
+├── locales/                 # Internationalization
+│   └── translations.ts     # Thai and English translations
 ├── theme.ts                # MUI theme configuration
 ├── tailwind.config.ts      # Tailwind CSS configuration
 ├── tsconfig.json           # TypeScript configuration
@@ -97,11 +146,11 @@ npm run lint
 
 ## 🎨 Color Scheme
 
-- **Primary Orange**: `#FF6600` (Flash Express brand color)
-- **Primary Dark**: `#E55A00`
-- **Primary Light**: `#FF8533`
-- **Secondary**: `#333333`
-- **Secondary Light**: `#666666`
+- **Primary Indigo**: `#4F46E5` (Fast Express brand color)
+- **Primary Dark**: `#4338CA`
+- **Primary Light**: `#6366F1`
+- **Secondary**: `#475569`
+- **Secondary Light**: `#64748B`
 
 ## 🖼️ Screenshots
 
@@ -120,7 +169,14 @@ npm run lint
 The project uses Tailwind CSS v4 with the new `@import "tailwindcss"` syntax and `@theme` blocks for custom configuration.
 
 ### Material-UI v7
-MUI components are integrated with custom theme configuration matching the Flash Express brand colors.
+MUI components are integrated with custom theme configuration matching the Fast Express brand colors.
+
+### Backend API
+The NestJS backend provides RESTful API endpoints for:
+- **Tracking**: `/api/tracking` - Package tracking operations
+- **Orders**: `/api/orders` - Order management operations
+
+See `backend/README.md` for detailed API documentation.
 
 ## 📱 Responsive Breakpoints
 
@@ -142,6 +198,6 @@ somkheartk
 
 ## 🙏 Acknowledgments
 
-- Inspired by Flash Express Thailand
-- Built with Next.js, Tailwind CSS, and Material-UI
+- Inspired by Fast Express Thailand
+- Built with Next.js, Tailwind CSS, Material-UI, and NestJS
 - Icons from MUI Icons library
