@@ -22,8 +22,13 @@ export class TrackingService {
   }
 
   async findByTrackingNumber(trackingNumber: string): Promise<Tracking> {
+    // Validate input is a string
+    if (typeof trackingNumber !== 'string' || !trackingNumber.trim()) {
+      throw new NotFoundException('Invalid tracking number format');
+    }
+    
     const tracking = await this.trackingModel
-      .findOne({ trackingNumber })
+      .findOne({ trackingNumber: trackingNumber.trim() })
       .exec();
     
     if (!tracking) {
@@ -39,8 +44,17 @@ export class TrackingService {
     trackingNumber: string,
     updateTrackingDto: UpdateTrackingDto,
   ): Promise<Tracking> {
+    // Validate input is a string
+    if (typeof trackingNumber !== 'string' || !trackingNumber.trim()) {
+      throw new NotFoundException('Invalid tracking number format');
+    }
+    
     const tracking = await this.trackingModel
-      .findOneAndUpdate({ trackingNumber }, updateTrackingDto, { new: true })
+      .findOneAndUpdate(
+        { trackingNumber: trackingNumber.trim() }, 
+        updateTrackingDto, 
+        { new: true }
+      )
       .exec();
     
     if (!tracking) {
@@ -53,8 +67,13 @@ export class TrackingService {
   }
 
   async delete(trackingNumber: string): Promise<void> {
+    // Validate input is a string
+    if (typeof trackingNumber !== 'string' || !trackingNumber.trim()) {
+      throw new NotFoundException('Invalid tracking number format');
+    }
+    
     const result = await this.trackingModel
-      .deleteOne({ trackingNumber })
+      .deleteOne({ trackingNumber: trackingNumber.trim() })
       .exec();
     
     if (result.deletedCount === 0) {

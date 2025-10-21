@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
+import mongoSanitize from 'express-mongo-sanitize';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -11,6 +12,9 @@ async function bootstrap() {
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
+  
+  // Sanitize data to prevent MongoDB Operator Injection
+  app.use(mongoSanitize());
   
   // Enable validation pipes globally
   app.useGlobalPipes(new ValidationPipe({

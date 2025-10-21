@@ -22,7 +22,14 @@ export class OrdersService {
   }
 
   async findByOrderNumber(orderNumber: string): Promise<Order> {
-    const order = await this.orderModel.findOne({ orderNumber }).exec();
+    // Validate input is a string
+    if (typeof orderNumber !== 'string' || !orderNumber.trim()) {
+      throw new NotFoundException('Invalid order number format');
+    }
+    
+    const order = await this.orderModel
+      .findOne({ orderNumber: orderNumber.trim() })
+      .exec();
     
     if (!order) {
       throw new NotFoundException(`Order with number ${orderNumber} not found`);
@@ -32,15 +39,29 @@ export class OrdersService {
   }
 
   async findByCustomerEmail(email: string): Promise<Order[]> {
-    return this.orderModel.find({ customerEmail: email }).exec();
+    // Validate input is a string
+    if (typeof email !== 'string' || !email.trim()) {
+      return [];
+    }
+    
+    return this.orderModel.find({ customerEmail: email.trim() }).exec();
   }
 
   async update(
     orderNumber: string,
     updateOrderDto: UpdateOrderDto,
   ): Promise<Order> {
+    // Validate input is a string
+    if (typeof orderNumber !== 'string' || !orderNumber.trim()) {
+      throw new NotFoundException('Invalid order number format');
+    }
+    
     const order = await this.orderModel
-      .findOneAndUpdate({ orderNumber }, updateOrderDto, { new: true })
+      .findOneAndUpdate(
+        { orderNumber: orderNumber.trim() }, 
+        updateOrderDto, 
+        { new: true }
+      )
       .exec();
     
     if (!order) {
@@ -51,7 +72,14 @@ export class OrdersService {
   }
 
   async delete(orderNumber: string): Promise<void> {
-    const result = await this.orderModel.deleteOne({ orderNumber }).exec();
+    // Validate input is a string
+    if (typeof orderNumber !== 'string' || !orderNumber.trim()) {
+      throw new NotFoundException('Invalid order number format');
+    }
+    
+    const result = await this.orderModel
+      .deleteOne({ orderNumber: orderNumber.trim() })
+      .exec();
     
     if (result.deletedCount === 0) {
       throw new NotFoundException(`Order with number ${orderNumber} not found`);
