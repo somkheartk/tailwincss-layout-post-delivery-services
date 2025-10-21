@@ -22,21 +22,21 @@ const Header: React.FC = () => {
         
         <LocalShippingIcon sx={{ mr: 1 }} />
         <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 700 }}>
-          Flash Express
+          แฟลช เอ็กซ์เพรส
         </Typography>
         
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
           <Button color="inherit" className="hover:bg-primary-dark">
-            Track
+            ติดตาม
           </Button>
           <Button color="inherit" className="hover:bg-primary-dark">
-            Ship
+            ส่งพัสดุ
           </Button>
           <Button color="inherit" className="hover:bg-primary-dark">
-            Services
+            บริการ
           </Button>
           <Button color="inherit" className="hover:bg-primary-dark">
-            About
+            เกี่ยวกับ
           </Button>
         </Box>
         

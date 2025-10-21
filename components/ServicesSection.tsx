@@ -10,23 +10,23 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 const services = [
   {
     icon: <FlashOnIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: 'Fast Delivery',
-    description: 'Same-day delivery available in major cities',
+    title: 'จัดส่งรวดเร็ว',
+    description: 'บริการจัดส่งในวันเดียวกันในเมืองใหญ่',
   },
   {
     icon: <SecurityIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: 'Secure Handling',
-    description: 'Your packages are insured and handled with care',
+    title: 'ปลอดภัยมั่นคง',
+    description: 'พัสดุของคุณได้รับการประกันและดูแลอย่างดี',
   },
   {
     icon: <LocalShippingIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: 'Wide Coverage',
-    description: 'Nationwide delivery network across Thailand',
+    title: 'ครอบคลุมทั่วไทย',
+    description: 'เครือข่ายจัดส่งทั่วประเทศไทย',
   },
   {
     icon: <SupportAgentIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: '24/7 Support',
-    description: 'Customer service available around the clock',
+    title: 'บริการตลอด 24/7',
+    description: 'บริการลูกค้าพร้อมให้บริการตลอด 24 ชั่วโมง',
   },
 ];
 
@@ -34,7 +34,7 @@ const ServicesSection: React.FC = () => {
   return (
     <div className="mb-12">
       <Typography variant="h4" className="text-center mb-8 font-bold text-gray-800">
-        Why Choose Flash Express?
+        ทำไมต้องเลือกแฟลช เอ็กซ์เพรส?
       </Typography>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">

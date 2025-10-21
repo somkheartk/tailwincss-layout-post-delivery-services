@@ -13,17 +13,17 @@ const TrackingSection: React.FC = () => {
     // Mock tracking data
     setTrackingResult({
       trackingNumber: trackingNumber || 'FEX123456789',
-      status: 'In Transit',
+      status: 'กำลังจัดส่ง',
       currentStep: 2,
       steps: [
-        { label: 'Order Placed', date: '2024-10-19 10:30', completed: true },
-        { label: 'Picked Up', date: '2024-10-19 14:20', completed: true },
-        { label: 'In Transit', date: '2024-10-20 08:15', completed: true },
-        { label: 'Out for Delivery', date: '', completed: false },
-        { label: 'Delivered', date: '', completed: false },
+        { label: 'สร้างคำสั่งซื้อ', date: '2024-10-19 10:30', completed: true },
+        { label: 'รับพัสดุแล้ว', date: '2024-10-19 14:20', completed: true },
+        { label: 'กำลังจัดส่ง', date: '2024-10-20 08:15', completed: true },
+        { label: 'ออกจัดส่ง', date: '', completed: false },
+        { label: 'จัดส่งสำเร็จ', date: '', completed: false },
       ],
-      sender: 'Bangkok Warehouse',
-      receiver: 'John Doe, Chiang Mai',
+      sender: 'คลังสินค้ากรุงเทพฯ',
+      receiver: 'คุณสมชาย ใจดี, เชียงใหม่',
       estimatedDelivery: '2024-10-21',
     });
   };
@@ -33,17 +33,17 @@ const TrackingSection: React.FC = () => {
       <Card className="shadow-lg mb-6">
         <CardContent className="p-8">
           <Typography variant="h4" className="mb-4 text-gray-800 font-bold">
-            Track Your Shipment
+            ติดตามพัสดุของคุณ
           </Typography>
           <Typography variant="body1" className="mb-6 text-gray-600">
-            Enter your tracking number to get real-time updates on your delivery
+            กรุณากรอกหมายเลขติดตามเพื่อดูสถานะการจัดส่งแบบเรียลไทม์
           </Typography>
           
           <div className="flex gap-4 mb-4">
             <TextField
               fullWidth
               variant="outlined"
-              placeholder="Enter tracking number (e.g., FEX123456789)"
+              placeholder="กรอกหมายเลขติดตาม (เช่น FEX123456789)"
               value={trackingNumber}
               onChange={(e) => setTrackingNumber(e.target.value)}
               className="bg-white"
@@ -57,7 +57,7 @@ const TrackingSection: React.FC = () => {
               className="px-8 bg-primary hover:bg-primary-dark"
               sx={{ minWidth: '150px' }}
             >
-              Track
+              ค้นหา
             </Button>
           </div>
         </CardContent>
@@ -69,13 +69,13 @@ const TrackingSection: React.FC = () => {
             <Box className="flex justify-between items-start mb-6">
               <div>
                 <Typography variant="h5" className="font-bold text-gray-800 mb-2">
-                  Tracking Number: {trackingResult.trackingNumber}
+                  หมายเลขติดตาม: {trackingResult.trackingNumber}
                 </Typography>
                 <Typography variant="body2" className="text-gray-600 mb-1">
-                  From: {trackingResult.sender}
+                  จาก: {trackingResult.sender}
                 </Typography>
                 <Typography variant="body2" className="text-gray-600 mb-1">
-                  To: {trackingResult.receiver}
+                  ถึง: {trackingResult.receiver}
                 </Typography>
               </div>
               <Chip
@@ -103,7 +103,7 @@ const TrackingSection: React.FC = () => {
 
             <Box className="bg-orange-50 p-4 rounded-lg mt-6">
               <Typography variant="body1" className="font-semibold text-gray-800">
-                Estimated Delivery: {trackingResult.estimatedDelivery}
+                กำหนดจัดส่ง: {trackingResult.estimatedDelivery}
               </Typography>
             </Box>
           </CardContent>
