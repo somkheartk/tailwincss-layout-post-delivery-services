@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-4">
             <Typography variant="h6" className="font-bold mb-4">
-              แฟลช เอ็กซ์เพรส
+              ฟาสต์ เอ็กซ์เพรส
             </Typography>
             <Typography variant="body2" className="mb-4 text-gray-300">
               พันธมิตรที่เชื่อถือได้สำหรับบริการจัดส่งที่รวดเร็วและน่าเชื่อถือทั่วประเทศไทย
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               📞 สายด่วน: 1234-5678
             </Typography>
             <Typography variant="body2" className="text-gray-300 mb-2">
-              📧 อีเมล: support@flashexpress.com
+              📧 อีเมล: support@fastexpress.com
             </Typography>
             <Typography variant="body2" className="text-gray-300">
               📍 กรุงเทพมหานคร ประเทศไทย
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
         
         <Box className="border-t border-gray-700 mt-8 pt-8 text-center">
           <Typography variant="body2" className="text-gray-400">
-            © 2024 แฟลช เอ็กซ์เพรส สงวนลิขสิทธิ์
+            © 2024 ฟาสต์ เอ็กซ์เพรส สงวนลิขสิทธิ์
           </Typography>
         </Box>
       </Container>

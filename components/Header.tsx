@@ -70,8 +70,10 @@ const Header: React.FC<HeaderProps> = ({
               onChange={handleRoleChange}
               sx={{
                 color: 'white',
+                borderRadius: 2,
                 '.MuiOutlinedInput-notchedOutline': {
                   borderColor: 'rgba(255, 255, 255, 0.5)',
+                  borderRadius: 2,
                 },
                 '&:hover .MuiOutlinedInput-notchedOutline': {
                   borderColor: 'rgba(255, 255, 255, 0.7)',
@@ -100,8 +102,10 @@ const Header: React.FC<HeaderProps> = ({
               onChange={handleLanguageChange}
               sx={{
                 color: 'white',
+                borderRadius: 2,
                 '.MuiOutlinedInput-notchedOutline': {
                   borderColor: 'rgba(255, 255, 255, 0.5)',
+                  borderRadius: 2,
                 },
                 '&:hover .MuiOutlinedInput-notchedOutline': {
                   borderColor: 'rgba(255, 255, 255, 0.7)',
