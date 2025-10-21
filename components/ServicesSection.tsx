@@ -6,35 +6,41 @@ import FlashOnIcon from '@mui/icons-material/FlashOn';
 import SecurityIcon from '@mui/icons-material/Security';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import { Language } from '@/locales/translations';
 
-const services = [
-  {
-    icon: <FlashOnIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: 'จัดส่งรวดเร็ว',
-    description: 'บริการจัดส่งในวันเดียวกันในเมืองใหญ่',
-  },
-  {
-    icon: <SecurityIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: 'ปลอดภัยมั่นคง',
-    description: 'พัสดุของคุณได้รับการประกันและดูแลอย่างดี',
-  },
-  {
-    icon: <LocalShippingIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: 'ครอบคลุมทั่วไทย',
-    description: 'เครือข่ายจัดส่งทั่วประเทศไทย',
-  },
-  {
-    icon: <SupportAgentIcon className="text-primary" sx={{ fontSize: 48 }} />,
-    title: 'บริการตลอด 24/7',
-    description: 'บริการลูกค้าพร้อมให้บริการตลอด 24 ชั่วโมง',
-  },
-];
+interface ServicesSectionProps {
+  language: Language;
+  t: any;
+}
 
-const ServicesSection: React.FC = () => {
+const ServicesSection: React.FC<ServicesSectionProps> = ({ language, t }) => {
+  const services = [
+    {
+      icon: <FlashOnIcon className="text-primary" sx={{ fontSize: 48 }} />,
+      title: t.service1Title,
+      description: t.service1Desc,
+    },
+    {
+      icon: <SecurityIcon className="text-primary" sx={{ fontSize: 48 }} />,
+      title: t.service2Title,
+      description: t.service2Desc,
+    },
+    {
+      icon: <LocalShippingIcon className="text-primary" sx={{ fontSize: 48 }} />,
+      title: t.service3Title,
+      description: t.service3Desc,
+    },
+    {
+      icon: <SupportAgentIcon className="text-primary" sx={{ fontSize: 48 }} />,
+      title: t.service4Title,
+      description: t.service4Desc,
+    },
+  ];
+
   return (
     <div className="mb-12">
       <Typography variant="h4" className="text-center mb-8 font-bold text-gray-800">
-        ทำไมต้องเลือกแฟลช เอ็กซ์เพรส?
+        {t.servicesTitle}
       </Typography>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
