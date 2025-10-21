@@ -3,7 +3,7 @@ export type Language = 'th' | 'en';
 export const translations = {
   th: {
     // Header
-    appName: 'แฟลช เอ็กซ์เพรส',
+    appName: 'ฟาสต์ เอ็กซ์เพรส',
     language: 'ภาษา',
     role: 'สิทธิ์',
     
@@ -31,11 +31,11 @@ export const translations = {
     // Tracking Section
     trackingTitle: 'ติดตามพัสดุของคุณ',
     trackingDescription: 'กรุณากรอกหมายเลขติดตามเพื่อดูสถานะการจัดส่งแบบเรียลไทม์',
-    trackingPlaceholder: 'กรอกหมายเลขติดตาม (เช่น FEX123456789)',
+    trackingPlaceholder: 'กรอกหมายเลขติดตาม (เช่น FTX123456789)',
     search: 'ค้นหา',
     
     // Services Section
-    servicesTitle: 'ทำไมต้องเลือกแฟลช เอ็กซ์เพรส?',
+    servicesTitle: 'ทำไมต้องเลือกฟาสต์ เอ็กซ์เพรส?',
     service1Title: 'จัดส่งรวดเร็ว',
     service1Desc: 'บริการจัดส่งในวันเดียวกันในเมืองใหญ่',
     service2Title: 'ปลอดภัยมั่นคง',
@@ -50,11 +50,11 @@ export const translations = {
     footerServices: 'บริการ',
     footerHelp: 'ช่วยเหลือ',
     footerContact: 'ติดต่อ',
-    footerCopyright: '© 2024 แฟลช เอ็กซ์เพรส สงวนลิขสิทธิ์',
+    footerCopyright: '© 2024 ฟาสต์ เอ็กซ์เพรส สงวนลิขสิทธิ์',
   },
   en: {
     // Header
-    appName: 'Flash Express',
+    appName: 'Fast Express',
     language: 'Language',
     role: 'Role',
     
@@ -82,11 +82,11 @@ export const translations = {
     // Tracking Section
     trackingTitle: 'Track Your Package',
     trackingDescription: 'Please enter tracking number to view real-time delivery status',
-    trackingPlaceholder: 'Enter tracking number (e.g. FEX123456789)',
+    trackingPlaceholder: 'Enter tracking number (e.g. FTX123456789)',
     search: 'Search',
     
     // Services Section
-    servicesTitle: 'Why Choose Flash Express?',
+    servicesTitle: 'Why Choose Fast Express?',
     service1Title: 'Fast Delivery',
     service1Desc: 'Same-day delivery service in major cities',
     service2Title: 'Safe & Secure',
@@ -101,7 +101,7 @@ export const translations = {
     footerServices: 'Services',
     footerHelp: 'Help',
     footerContact: 'Contact',
-    footerCopyright: '© 2024 Flash Express. All rights reserved',
+    footerCopyright: '© 2024 Fast Express. All rights reserved',
   },
 };
 

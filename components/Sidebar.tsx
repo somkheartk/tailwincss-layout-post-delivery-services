@@ -42,6 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose, language, t, isMobile 
           gap: 1.5,
           bgcolor: 'primary.main',
           color: 'white',
+          borderRadius: 0,
         }}
       >
         <LocalShippingIcon sx={{ fontSize: 32 }} />
@@ -59,10 +60,12 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose, language, t, isMobile 
             <ListItemButton
               sx={{
                 mx: 1,
-                borderRadius: 1,
+                borderRadius: 2,
+                transition: 'all 0.3s ease',
                 '&:hover': {
-                  bgcolor: 'primary.light',
+                  bgcolor: 'primary.main',
                   color: 'white',
+                  transform: 'translateX(4px)',
                   '& .MuiListItemIcon-root': {
                     color: 'white',
                   },
@@ -74,7 +77,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose, language, t, isMobile 
                 }
               }}
             >
-              <ListItemIcon sx={{ minWidth: 40, color: 'primary.main' }}>
+              <ListItemIcon sx={{ minWidth: 40, color: 'primary.main', transition: 'color 0.3s ease' }}>
                 {item.icon}
               </ListItemIcon>
               <ListItemText 
