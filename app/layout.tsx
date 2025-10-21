@@ -5,7 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "@/theme";
 
 export const metadata: Metadata = {
-  title: "Flash Express - ระบบจัดการจัดส่งพัสดุ",
+  title: "Fast Express - ระบบจัดการจัดส่งพัสดุ",
   description: "ระบบจัดการจัดส่งพัสดุที่รวดเร็วและเชื่อถือได้",
 };
 
