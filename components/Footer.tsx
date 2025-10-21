@@ -20,10 +20,10 @@ const Footer: React.FC = () => {
               พันธมิตรที่เชื่อถือได้สำหรับบริการจัดส่งที่รวดเร็วและน่าเชื่อถือทั่วประเทศไทย
             </Typography>
             <Box className="flex gap-3">
-              <FacebookIcon className="cursor-pointer hover:text-primary transition-colors" />
-              <TwitterIcon className="cursor-pointer hover:text-primary transition-colors" />
-              <InstagramIcon className="cursor-pointer hover:text-primary transition-colors" />
-              <LinkedInIcon className="cursor-pointer hover:text-primary transition-colors" />
+              <FacebookIcon sx={{ color: '#FF6600' }} className="cursor-pointer hover:text-white transition-colors" />
+              <TwitterIcon sx={{ color: '#FF6600' }} className="cursor-pointer hover:text-white transition-colors" />
+              <InstagramIcon sx={{ color: '#FF6600' }} className="cursor-pointer hover:text-white transition-colors" />
+              <LinkedInIcon sx={{ color: '#FF6600' }} className="cursor-pointer hover:text-white transition-colors" />
             </Box>
           </div>
           
@@ -32,16 +32,16 @@ const Footer: React.FC = () => {
               บริการ
             </Typography>
             <Box className="flex flex-col gap-2">
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 จัดส่งด่วน
               </Link>
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 จัดส่งวันเดียว
               </Link>
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 ระหว่างประเทศ
               </Link>
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 จัดส่งจำนวนมาก
               </Link>
             </Box>
@@ -52,16 +52,16 @@ const Footer: React.FC = () => {
               ช่วยเหลือ
             </Typography>
             <Box className="flex flex-col gap-2">
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 ศูนย์ช่วยเหลือ
               </Link>
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 ติดตามพัสดุ
               </Link>
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 ติดต่อเรา
               </Link>
-              <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
+              <Link href="#" color="inherit" sx={{ '&:hover': { color: '#FF6600' } }} className="text-gray-300 no-underline transition-colors">
                 คำถามที่พบบ่อย
               </Link>
             </Box>

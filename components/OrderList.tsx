@@ -45,6 +45,36 @@ const mockOrders = [
     amount: '฿350',
     statusColor: 'success' as const,
   },
+  {
+    id: 'FEX789456123',
+    date: '2024-10-19',
+    status: 'กำลังจัดส่ง',
+    from: 'ขอนแก่น',
+    to: 'กรุงเทพฯ',
+    items: 'หนังสือ - 5 เล่ม',
+    amount: '฿280',
+    statusColor: 'warning' as const,
+  },
+  {
+    id: 'FEX321654987',
+    date: '2024-10-17',
+    status: 'จัดส่งสำเร็จ',
+    from: 'กรุงเทพฯ',
+    to: 'สงขลา',
+    items: 'อุปกรณ์กีฬา - 1 ชุด',
+    amount: '฿890',
+    statusColor: 'success' as const,
+  },
+  {
+    id: 'FEX147258369',
+    date: '2024-10-21',
+    status: 'กำลังจัดส่ง',
+    from: 'ระยอง',
+    to: 'กรุงเทพฯ',
+    items: 'ของฝาก - 3 กล่อง',
+    amount: '฿520',
+    statusColor: 'warning' as const,
+  },
 ];
 
 const OrderList: React.FC = () => {

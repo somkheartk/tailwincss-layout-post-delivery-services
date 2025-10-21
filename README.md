@@ -23,11 +23,12 @@ A modern, responsive post delivery tracking and management system built with Nex
 - **Responsive Grid Layout**: Optimized for all screen sizes
 
 ### Design & UX
-- **Flash Express Branding**: Orange (#FF6600) color scheme
-- **Responsive Design**: Mobile-first approach, works on all devices
+- **Orange & White Theme**: Modern orange (#FF6600) and white color scheme inspired by Flash Express
+- **Responsive Design**: Mobile-first approach, works perfectly on all devices
 - **Modern UI Components**: Material-UI components with Tailwind CSS styling
 - **Tab Navigation**: Seamless switching between tracking and orders
-- **Professional Footer**: Contact info, services, and social links
+- **Professional Footer**: Contact info, services, and social links with orange accents
+- **Complete Screen Mocks**: Fully functional tracking and order management interfaces with sample data
 
 ## 🛠️ Tech Stack
 
@@ -146,22 +147,23 @@ npm run lint
 
 ## 🎨 Color Scheme
 
-- **Primary Indigo**: `#4F46E5` (Fast Express brand color)
-- **Primary Dark**: `#4338CA`
-- **Primary Light**: `#6366F1`
+- **Primary Orange**: `#FF6600` (Flash Express brand color)
+- **Primary Dark**: `#E55A00`
+- **Primary Light**: `#FF7711`
 - **Secondary**: `#475569`
 - **Secondary Light**: `#64748B`
+- **White**: `#FFFFFF` (Used for clean, modern backgrounds)
 
 ## 🖼️ Screenshots
 
-### Main Tracking Page
-![Tracking Page](https://github.com/user-attachments/assets/8b1be5b6-e7f2-413b-8d61-d5bcdc51a9f5)
+### Main Tracking Page (Orange Theme)
+![Tracking Page](https://github.com/user-attachments/assets/3312b279-8367-4e43-b38f-46ba04a31510)
 
-### Tracking Result with Progress Stepper
-![Tracking Result](https://github.com/user-attachments/assets/62622f38-9d00-4d2b-92f1-4efc691d577b)
+### Tracking Result with Progress Stepper (Orange Theme)
+![Tracking Result](https://github.com/user-attachments/assets/7b6dd364-9cde-49b2-add1-28cf330e073b)
 
-### Order Management Interface
-![Orders List](https://github.com/user-attachments/assets/2ae1b130-9c96-4fee-973e-bd96b910e9c3)
+### Order Management Interface (Orange Theme)
+![Orders List](https://github.com/user-attachments/assets/1098db40-c0e6-4ad0-952c-0ecbe3512cb1)
 
 ## 🔧 Configuration
 
