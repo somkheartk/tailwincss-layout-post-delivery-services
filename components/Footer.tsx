@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-4">
             <Typography variant="h6" className="font-bold mb-4">
-              Flash Express
+              แฟลช เอ็กซ์เพรส
             </Typography>
             <Typography variant="body2" className="mb-4 text-gray-300">
-              Your trusted partner for fast and reliable delivery services across Thailand.
+              พันธมิตรที่เชื่อถือได้สำหรับบริการจัดส่งที่รวดเร็วและน่าเชื่อถือทั่วประเทศไทย
             </Typography>
             <Box className="flex gap-3">
               <FacebookIcon className="cursor-pointer hover:text-primary transition-colors" />
@@ -29,63 +29,63 @@ const Footer: React.FC = () => {
           
           <div className="md:col-span-2">
             <Typography variant="h6" className="font-bold mb-4">
-              Services
+              บริการ
             </Typography>
             <Box className="flex flex-col gap-2">
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                Express Delivery
+                จัดส่งด่วน
               </Link>
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                Same Day
+                จัดส่งวันเดียว
               </Link>
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                International
+                ระหว่างประเทศ
               </Link>
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                Bulk Shipping
+                จัดส่งจำนวนมาก
               </Link>
             </Box>
           </div>
           
           <div className="md:col-span-2">
             <Typography variant="h6" className="font-bold mb-4">
-              Support
+              ช่วยเหลือ
             </Typography>
             <Box className="flex flex-col gap-2">
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                Help Center
+                ศูนย์ช่วยเหลือ
               </Link>
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                Track Order
+                ติดตามพัสดุ
               </Link>
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                Contact Us
+                ติดต่อเรา
               </Link>
               <Link href="#" color="inherit" className="text-gray-300 hover:text-primary no-underline">
-                FAQ
+                คำถามที่พบบ่อย
               </Link>
             </Box>
           </div>
           
           <div className="md:col-span-4">
             <Typography variant="h6" className="font-bold mb-4">
-              Contact
+              ติดต่อ
             </Typography>
             <Typography variant="body2" className="text-gray-300 mb-2">
-              📞 Hotline: 1234-5678
+              📞 สายด่วน: 1234-5678
             </Typography>
             <Typography variant="body2" className="text-gray-300 mb-2">
-              📧 Email: support@flashexpress.com
+              📧 อีเมล: support@flashexpress.com
             </Typography>
             <Typography variant="body2" className="text-gray-300">
-              📍 Bangkok, Thailand
+              📍 กรุงเทพมหานคร ประเทศไทย
             </Typography>
           </div>
         </div>
         
         <Box className="border-t border-gray-700 mt-8 pt-8 text-center">
           <Typography variant="body2" className="text-gray-400">
-            © 2024 Flash Express. All rights reserved.
+            © 2024 แฟลช เอ็กซ์เพรส สงวนลิขสิทธิ์
           </Typography>
         </Box>
       </Container>

@@ -18,30 +18,30 @@ const mockOrders = [
   {
     id: 'FEX123456789',
     date: '2024-10-20',
-    status: 'In Transit',
-    from: 'Bangkok',
-    to: 'Chiang Mai',
-    items: 'Electronics - 2 items',
+    status: 'กำลังจัดส่ง',
+    from: 'กรุงเทพฯ',
+    to: 'เชียงใหม่',
+    items: 'อิเล็กทรอนิกส์ - 2 รายการ',
     amount: '฿450',
     statusColor: 'warning' as const,
   },
   {
     id: 'FEX987654321',
     date: '2024-10-18',
-    status: 'Delivered',
-    from: 'Bangkok',
-    to: 'Phuket',
-    items: 'Documents - 1 package',
+    status: 'จัดส่งสำเร็จ',
+    from: 'กรุงเทพฯ',
+    to: 'ภูเก็ต',
+    items: 'เอกสาร - 1 ห่อ',
     amount: '฿120',
     statusColor: 'success' as const,
   },
   {
     id: 'FEX456789123',
     date: '2024-10-15',
-    status: 'Delivered',
-    from: 'Chiang Mai',
-    to: 'Bangkok',
-    items: 'Clothing - 3 items',
+    status: 'จัดส่งสำเร็จ',
+    from: 'เชียงใหม่',
+    to: 'กรุงเทพฯ',
+    items: 'เสื้อผ้า - 3 รายการ',
     amount: '฿350',
     statusColor: 'success' as const,
   },
@@ -51,7 +51,7 @@ const OrderList: React.FC = () => {
   return (
     <div className="mb-12">
       <Typography variant="h4" className="mb-6 font-bold text-gray-800">
-        My Orders
+        คำสั่งซื้อของฉัน
       </Typography>
 
       <div className="space-y-4">
@@ -77,7 +77,7 @@ const OrderList: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                       <div>
                         <Typography variant="body2" className="text-gray-500">
-                          Date
+                          วันที่
                         </Typography>
                         <Typography variant="body1" className="font-semibold">
                           {order.date}
@@ -85,7 +85,7 @@ const OrderList: React.FC = () => {
                       </div>
                       <div>
                         <Typography variant="body2" className="text-gray-500">
-                          From → To
+                          จาก → ถึง
                         </Typography>
                         <Typography variant="body1" className="font-semibold">
                           {order.from} → {order.to}
@@ -93,7 +93,7 @@ const OrderList: React.FC = () => {
                       </div>
                       <div>
                         <Typography variant="body2" className="text-gray-500">
-                          Items
+                          รายการ
                         </Typography>
                         <Typography variant="body1" className="font-semibold">
                           {order.items}
@@ -101,7 +101,7 @@ const OrderList: React.FC = () => {
                       </div>
                       <div>
                         <Typography variant="body2" className="text-gray-500">
-                          Amount
+                          จำนวนเงิน
                         </Typography>
                         <Typography variant="body1" className="font-semibold text-primary">
                           {order.amount}
@@ -119,7 +119,7 @@ const OrderList: React.FC = () => {
                       size="small"
                       className="whitespace-nowrap"
                     >
-                      View Details
+                      ดูรายละเอียด
                     </Button>
                     <Button
                       variant="outlined"
@@ -127,7 +127,7 @@ const OrderList: React.FC = () => {
                       size="small"
                       className="whitespace-nowrap"
                     >
-                      Invoice
+                      ใบแจ้งหนี้
                     </Button>
                   </Box>
                 </Box>
