@@ -4,8 +4,14 @@ import React, { useState } from 'react';
 import { TextField, Button, Card, CardContent, Typography, Stepper, Step, StepLabel, Box, Chip } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import { Language } from '@/locales/translations';
 
-const TrackingSection: React.FC = () => {
+interface TrackingSectionProps {
+  language: Language;
+  t: any;
+}
+
+const TrackingSection: React.FC<TrackingSectionProps> = ({ language, t }) => {
   const [trackingNumber, setTrackingNumber] = useState('');
   const [trackingResult, setTrackingResult] = useState<any>(null);
 
@@ -33,17 +39,17 @@ const TrackingSection: React.FC = () => {
       <Card className="shadow-lg mb-6">
         <CardContent className="p-8">
           <Typography variant="h4" className="mb-4 text-gray-800 font-bold">
-            ติดตามพัสดุของคุณ
+            {t.trackingTitle}
           </Typography>
           <Typography variant="body1" className="mb-6 text-gray-600">
-            กรุณากรอกหมายเลขติดตามเพื่อดูสถานะการจัดส่งแบบเรียลไทม์
+            {t.trackingDescription}
           </Typography>
           
           <div className="flex gap-4 mb-4">
             <TextField
               fullWidth
               variant="outlined"
-              placeholder="กรอกหมายเลขติดตาม (เช่น FEX123456789)"
+              placeholder={t.trackingPlaceholder}
               value={trackingNumber}
               onChange={(e) => setTrackingNumber(e.target.value)}
               className="bg-white"
@@ -57,7 +63,7 @@ const TrackingSection: React.FC = () => {
               className="px-8 bg-primary hover:bg-primary-dark"
               sx={{ minWidth: '150px' }}
             >
-              ค้นหา
+              {t.search}
             </Button>
           </div>
         </CardContent>
